@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+	android:layout_width="fill_parent" android:background="#fff"
+	android:layout_height="fill_parent" android:paddingLeft="4dip"
+	android:paddingTop="4dip" android:paddingRight="4dip"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:layout_marginLeft="100dip" android:gravity="center">
+		<TableRow>
+			<ImageButton android:id="@+id/tf1" android:src="@drawable/tf1"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+			<ImageButton android:id="@+id/france2" android:src="@drawable/france2"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+			<ImageButton android:id="@+id/france3" android:src="@drawable/france3"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+			<ImageButton android:id="@+id/france4" android:src="@drawable/france4"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+			<ImageButton android:id="@+id/france5" android:src="@drawable/france5"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+		</TableRow>
+		<TableRow>
+			<ImageButton android:id="@+id/m6" android:src="@drawable/m6"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+			<ImageButton android:id="@+id/arte" android:src="@drawable/arte"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+			<ImageButton android:id="@+id/direct8" android:src="@drawable/icon"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+			<ImageButton android:id="@+id/w9" android:src="@drawable/icon"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+			<ImageButton android:id="@+id/tmc" android:src="@drawable/icon"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+		</TableRow>
+		<TableRow>
+			<ImageButton android:id="@+id/nt1" android:src="@drawable/icon"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+			<ImageButton android:id="@+id/nrj12" android:src="@drawable/icon"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+			<ImageButton android:id="@+id/lcp" android:src="@drawable/icon"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+			<ImageButton android:id="@+id/bfm" android:src="@drawable/icon"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+			<ImageButton android:id="@+id/itele" android:src="@drawable/icon"
+				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
+		</TableRow>
+	</TableLayout>
+</LinearLayout>
