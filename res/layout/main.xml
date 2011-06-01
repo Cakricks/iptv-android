@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+	android:layout_width="fill_parent" android:background="#fff"
+	android:layout_height="fill_parent" android:paddingLeft="4dip"
+	android:paddingRight="4dip" xmlns:android="http://schemas.android.com/apk/res/android"
+	>
+	<ImageView android:layout_marginTop="60dip"
+		android:layout_marginBottom="50dip" android:layout_height="200dip"
+		android:src="@drawable/tsp" android:id="@+id/imageView1"
+		android:layout_width="wrap_content"></ImageView>
+	
+
+
+	<TextView android:id="@+id/videolink" android:text="Enter your video link below:"
+		android:textSize="20px" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:paddingLeft="5dip"
+		android:textColor="#0060CF"></TextView>
+	<Spinner android:id="@+id/spinner_scenario" android:layout_height="wrap_content"
+		android:drawSelectorOnTop="true" android:layout_width="fill_parent"
+		android:layout_gravity="center_horizontal"></Spinner>
+
+
+	<EditText android:layout_height="wrap_content" android:id="@+id/urlEdit"
+		android:autoText="true" android:layout_width="fill_parent"
+		android:layout_gravity="center_horizontal"></EditText>
+	<Button android:layout_height="55dip" android:id="@+id/buttonSubmit"
+		android:text="Play" android:layout_width="90dip"
+		android:layout_gravity="center_horizontal"></Button>
+
+
+</LinearLayout>

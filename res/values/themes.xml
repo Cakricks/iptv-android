@@ -1,0 +1,7 @@
+<resources>
+    <style name="CustomButton" parent="android:style/Theme.NoTitleBar">
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:textViewStyle">@style/TextView</item>
+        <item name="android:editTextStyle">@style/EditText</item>
+    </style>
+</resources>
