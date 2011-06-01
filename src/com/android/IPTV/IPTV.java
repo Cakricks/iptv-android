@@ -1,10 +1,7 @@
 package com.android.IPTV;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.net.wifi.WifiManager;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -24,7 +21,7 @@ public class IPTV extends Activity implements View.OnClickListener,
 	private EditText editUrl;
 	private Spinner spin;
 	private int positionSpinner;
-	private ProgressDialog dialog;
+	
 	private Button submitButton;
 
 	@Override
@@ -32,15 +29,6 @@ public class IPTV extends Activity implements View.OnClickListener,
 		super.onCreate(icicle);
 		setContentView(R.layout.main);
 		
-		dialog = new ProgressDialog(this);
-		dialog.setCancelable(false);
-		dialog.setMessage("Connecting Wifi");
-		dialog.show();
-		
-		ConnectionManagement cm = new ConnectionManagement();
-		cm.execute((Void)null);
-		
-
 		// Bouton lecture vidéo
 		
 		submitButton = (Button) findViewById(R.id.buttonSubmit);
@@ -109,42 +97,5 @@ public class IPTV extends Activity implements View.OnClickListener,
 			return false;
 	}
 
-	private class ConnectionManagement extends
-			AsyncTask<Void, Void, Void> {
-
-		
-
-		public void startWifi() {
-			WifiManager wM = (WifiManager) getSystemService(WIFI_SERVICE);
-			wM.setWifiEnabled(true);
-			
-		}
-
-		@Override
-		protected Void doInBackground(Void... params) {
-			
-			WifiManager wm = (WifiManager) getSystemService(WIFI_SERVICE);
-			if (wm.getWifiState() == WifiManager.WIFI_STATE_DISABLED) {
-				startWifi(); // Démarrer le wifi dans le cas où il est désactivé
-					
-				for (int i = 0; i < 99; i++) {
-					try {
-						Thread.sleep(10);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-					
-				}
-			}
-			
-			return null;
-		}
-
-		
-
-		public void onPostExecute(Void param) {
-				dialog.cancel();
-
-		}
-	}
+	
 }

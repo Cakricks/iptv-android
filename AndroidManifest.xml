@@ -5,16 +5,26 @@
 
 	<application android:icon="@drawable/logo" android:label="@string/app_name"
 		android:theme="@style/CustomButton">
-		<activity android:name=".IPTV" android:label="@string/app_name" android:screenOrientation="portrait">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />
-			</intent-filter>
+		<activity android:name=".IPTV" android:label="@string/app_name"
+			android:screenOrientation="portrait">
+
 		</activity>
 		<activity android:name=".PlayingVideo" android:label="@string/app_name"
 			android:screenOrientation="landscape"
 			android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
+		</activity>
+		<activity android:name=".ServerEnterDialog" android:label="@string/app_name"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+		</activity>
+		<activity android:name=".MinetTV" android:label="@string/app_name"
+			android:screenOrientation="landscape"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
 		</activity>
 
 	</application>

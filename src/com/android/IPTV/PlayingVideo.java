@@ -29,7 +29,7 @@ public class PlayingVideo extends Activity implements OnCompletionListener, OnEr
 		if (positionSpinner == 0) // Web TV HTTP
 			videoView.setVideoPath(URL);
 		else
-			videoView.setVideoURI(Uri.parse(URL)); // RTSP: streaming
+			videoView.setVideoURI(Uri.parse(URL)); // RTSP Live streaming
 
 		videoView.setMediaController(mediaController);
 		videoView.requestFocus();
@@ -41,7 +41,7 @@ public class PlayingVideo extends Activity implements OnCompletionListener, OnEr
 	@Override
 	public void onCompletion(MediaPlayer arg0) {
 		
-		Intent i = new Intent(this, IPTV.class);
+		Intent i = new Intent(this, MinetTV.class);
 		startActivity(i);
 	}
 

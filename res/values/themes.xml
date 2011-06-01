@@ -3,5 +3,6 @@
         <item name="android:buttonStyle">@style/Button</item>
         <item name="android:textViewStyle">@style/TextView</item>
         <item name="android:editTextStyle">@style/EditText</item>
+        <item name="android:imageButtonStyle">@style/ImageButton</item>
     </style>
 </resources>
