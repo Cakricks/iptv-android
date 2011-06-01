@@ -90,40 +90,7 @@ public class MinetTV extends Activity implements OnClickListener {
 		iteleButton.setOnClickListener(this);
 		
 
-		/* Configuration du menu du serveur */
-
-		LayoutInflater factory = LayoutInflater.from(this);
-		final View alertDialogView = factory.inflate(R.layout.alertdialogperso,
-				null);
-		adb = new AlertDialog.Builder(this);
-		adb.setView(alertDialogView);
-		adb.setTitle("IPTV Server Address");
-		adb.setIcon(android.R.drawable.ic_menu_info_details);
-
-		// On affecte un bouton "OK" à notre AlertDialog et on lui affecte un
-		// évènement
-		adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int which) {
-
-				EditText et = (EditText) alertDialogView
-						.findViewById(R.id.ServerEditText);
-				ChannelLinks.serverAddr = et.getText().toString();
-				if (ChannelLinks.serverAddr == "")
-					ChannelLinks.serverAddr = "0.0.0.0";
 		
-			}
-		});
-
-		// On crée un bouton "Annuler" à notre AlertDialog et on lui affecte un
-		// évènement
-		adb.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int which) {
-				// Nothing to do when cancelling
-				
-				dialog.cancel();
-			}
-		});
-
 		
 	}
 
@@ -192,13 +159,45 @@ public class MinetTV extends Activity implements OnClickListener {
 
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.server_menu, menu);
-		// menu.getItem(0).getSubMenu().setHeaderIcon(R.drawable.option_white);
-
+		
 		return true;
 	}
 
 	public boolean onOptionsItemSelected(MenuItem item) {
+		/* Configuration du menu du serveur */
+
+		LayoutInflater factory = LayoutInflater.from(this);
+		final View alertDialogView = factory.inflate(R.layout.alertdialogperso,
+				null);
+		adb = new AlertDialog.Builder(this);
+		adb.setView(alertDialogView);
+		adb.setTitle("IPTV Server Address");
+		adb.setIcon(android.R.drawable.ic_menu_info_details);
+
+		// On affecte un bouton "OK" à notre AlertDialog et on lui affecte un
+		// évènement
+		adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+
+				EditText et = (EditText) alertDialogView
+						.findViewById(R.id.ServerEditText);
+				ChannelLinks.serverAddr = et.getText().toString();
+				if (ChannelLinks.serverAddr == "")
+					ChannelLinks.serverAddr = "0.0.0.0";
 		
+			}
+		});
+
+		// On crée un bouton "Annuler" à notre AlertDialog et on lui affecte un
+		// évènement
+		adb.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				// Nothing to do when cancelling
+				
+				dialog.cancel();
+			}
+		});
+
 		adb.show();
 		return true;
 
