@@ -9,7 +9,7 @@
     android:id="@+id/ServerAddress"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Enter the server Adress :"
+    android:text="Enter the server Address :"
     android:paddingBottom="10dip" />
  
   <EditText 

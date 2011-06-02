@@ -3,6 +3,7 @@ package com.android.IPTV;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.wifi.WifiManager;
@@ -14,6 +15,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -37,6 +39,9 @@ public class MinetTV extends Activity implements OnClickListener {
 	private ImageButton lcpButton;
 	private ImageButton bfmButton;
 	private ImageButton iteleButton;
+
+	private Button configManu;
+
 	private AlertDialog.Builder adb;
 	private ProgressDialog dialog;
 
@@ -44,13 +49,13 @@ public class MinetTV extends Activity implements OnClickListener {
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		setContentView(R.layout.minet_tv);
-			
-		/*Configuration attente connexion wifi*/
+
+		/* Configuration attente connexion wifi */
 		dialog = new ProgressDialog(this);
 		dialog.setCancelable(false);
 		dialog.setMessage("Connecting Wifi");
 		dialog.show();
-				
+
 		/* Connexion Wifi */
 		ConnectionManagement cm = new ConnectionManagement();
 		cm.execute((Void) null);
@@ -71,6 +76,7 @@ public class MinetTV extends Activity implements OnClickListener {
 		lcpButton = (ImageButton) findViewById(R.id.lcp);
 		bfmButton = (ImageButton) findViewById(R.id.bfm);
 		iteleButton = (ImageButton) findViewById(R.id.itele);
+		configManu = (Button) findViewById(R.id.buttonManual);
 
 		/* Connection des boutons au Listener */
 		tf1Button.setOnClickListener(this);
@@ -88,62 +94,87 @@ public class MinetTV extends Activity implements OnClickListener {
 		lcpButton.setOnClickListener(this);
 		bfmButton.setOnClickListener(this);
 		iteleButton.setOnClickListener(this);
-		
+		configManu.setOnClickListener(ocl);
 
-		
-		
 	}
+ 
+ Context cont = this;
+ private OnClickListener ocl = new OnClickListener() {
+	    public void onClick(View v) {
+	    	Intent i = new Intent(cont,IPTV.class);
+			startActivity(i);
+	    }
+	};
 
 	@Override
 	public void onClick(View arg0) {
 
 		ImageButton button_clicked = (ImageButton) arg0;
+		
+		
 		switch (button_clicked.getId()) {
 		case R.id.tf1:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.tf1;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.tf1;
 			break;
 		case R.id.france2:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.france2;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.france2;
 			break;
 		case R.id.france3:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.france3;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.france3;
 			break;
 		case R.id.france4:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.france4;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.france4;
 			break;
 		case R.id.france5:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.france5;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.france5;
 			break;
 		case R.id.m6:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.m6;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.m6;
 			break;
 		case R.id.arte:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.arte;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.arte;
 			break;
 		case R.id.direct8:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.direct8;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.direct8;
 			break;
 		case R.id.w9:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.w9;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.w9;
 			break;
 		case R.id.nt1:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.nt1;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.nt1;
 			break;
 		case R.id.tmc:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.tmc;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.tmc;
 			break;
 		case R.id.nrj12:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.nrj12;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.nrj12;
 			break;
 		case R.id.lcp:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.lcp;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.lcp;
 			break;
 		case R.id.bfm:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.bfm;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.bfm;
 			break;
 		case R.id.itele:
-			urlTv = ChannelLinks.serverAddr + ChannelLinks.itele;
+			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
+					+ ChannelLinks.itele;
 			break;
+		
+
 		}
 
 		Intent i = new Intent(this, PlayingVideo.class);
@@ -159,7 +190,7 @@ public class MinetTV extends Activity implements OnClickListener {
 
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.server_menu, menu);
-		
+
 		return true;
 	}
 
@@ -184,7 +215,7 @@ public class MinetTV extends Activity implements OnClickListener {
 				ChannelLinks.serverAddr = et.getText().toString();
 				if (ChannelLinks.serverAddr == "")
 					ChannelLinks.serverAddr = "0.0.0.0";
-		
+
 			}
 		});
 
@@ -193,7 +224,7 @@ public class MinetTV extends Activity implements OnClickListener {
 		adb.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				// Nothing to do when cancelling
-				
+
 				dialog.cancel();
 			}
 		});

@@ -2,61 +2,82 @@
 <LinearLayout android:orientation="vertical"
 	android:layout_width="fill_parent" android:background="#fff"
 	android:layout_height="fill_parent" android:paddingLeft="4dip"
-	android:paddingTop="4dip" android:paddingRight="4dip"
+	android:paddingTop="50dip" android:paddingRight="4dip"
 	xmlns:android="http://schemas.android.com/apk/res/android">
 	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
 		android:layout_marginLeft="100dip" android:gravity="center">
 		<TableRow>
 			<ImageButton android:id="@+id/tf1" android:src="@drawable/tf1"
-				android:layout_width="50dip" android:layout_height="50dip"
+				android:background="@drawable/btn_custom_tv"
+				android:layout_width="60dip" android:layout_height="47dip"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
 			<ImageButton android:id="@+id/france2" android:src="@drawable/france2"
-				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_width="60dip" android:layout_height="47dip"
+				android:background="@drawable/btn_custom_tv"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
 			<ImageButton android:id="@+id/france3" android:src="@drawable/france3"
-				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_width="60dip" android:layout_height="47dip"
+				android:background="@drawable/btn_custom_tv"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
 			<ImageButton android:id="@+id/france4" android:src="@drawable/france4"
-				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_width="60dip" android:layout_height="47dip"
+				android:background="@drawable/btn_custom_tv"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
 			<ImageButton android:id="@+id/france5" android:src="@drawable/france5"
-				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_width="60dip" android:layout_height="47dip"
+				android:background="@drawable/btn_custom_tv"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
 		</TableRow>
 		<TableRow>
 			<ImageButton android:id="@+id/m6" android:src="@drawable/m6"
-				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_width="60dip" android:layout_height="47dip"
+				android:background="@drawable/btn_custom_tv"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
 			<ImageButton android:id="@+id/arte" android:src="@drawable/arte"
-				android:layout_width="50dip" android:layout_height="50dip"
+				android:layout_width="60dip" android:layout_height="47dip"
+				android:background="@drawable/btn_custom_tv"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
-			<ImageButton android:id="@+id/direct8" android:src="@drawable/icon"
-				android:layout_width="50dip" android:layout_height="50dip"
+			<ImageButton android:id="@+id/direct8" android:src="@drawable/direct8"
+				android:layout_width="60dip" android:layout_height="47dip"
+				android:background="@drawable/btn_custom_tv"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
-			<ImageButton android:id="@+id/w9" android:src="@drawable/icon"
-				android:layout_width="50dip" android:layout_height="50dip"
+			<ImageButton android:id="@+id/w9" android:src="@drawable/w9"
+				android:layout_width="60dip" android:layout_height="47dip"
+				android:background="@drawable/btn_custom_tv"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
-			<ImageButton android:id="@+id/tmc" android:src="@drawable/icon"
-				android:layout_width="50dip" android:layout_height="50dip"
+			<ImageButton android:id="@+id/tmc" android:src="@drawable/tmc"
+				android:layout_width="60dip" android:layout_height="47dip"
+				android:background="@drawable/btn_custom_tv"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
 		</TableRow>
 		<TableRow>
-			<ImageButton android:id="@+id/nt1" android:src="@drawable/icon"
-				android:layout_width="50dip" android:layout_height="50dip"
+			<ImageButton android:id="@+id/nt1" android:src="@drawable/nt1"
+				android:layout_width="60dip" android:layout_height="47dip"
+				android:background="@drawable/btn_custom_tv"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
-			<ImageButton android:id="@+id/nrj12" android:src="@drawable/icon"
-				android:layout_width="50dip" android:layout_height="50dip"
+			<ImageButton android:id="@+id/nrj12" android:src="@drawable/nrj12"
+				android:layout_width="60dip" android:layout_height="47dip"
+				android:background="@drawable/btn_custom_tv"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
-			<ImageButton android:id="@+id/lcp" android:src="@drawable/icon"
-				android:layout_width="50dip" android:layout_height="50dip"
+			<ImageButton android:id="@+id/lcp" android:src="@drawable/lcp"
+			android:background="@drawable/btn_custom_tv"
+				android:layout_width="60dip" android:layout_height="47dip"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
-			<ImageButton android:id="@+id/bfm" android:src="@drawable/icon"
-				android:layout_width="50dip" android:layout_height="50dip"
+			<ImageButton android:id="@+id/bfm" android:src="@drawable/bfm"
+				android:layout_width="60dip" android:layout_height="47dip"
+				android:background="@drawable/btn_custom_tv"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
-			<ImageButton android:id="@+id/itele" android:src="@drawable/icon"
-				android:layout_width="50dip" android:layout_height="50dip"
+			<ImageButton android:id="@+id/itele" android:src="@drawable/itele"
+				android:layout_width="60dip" android:layout_height="47dip"
+				android:background="@drawable/btn_custom_tv"
 				android:layout_marginRight="20dip" android:layout_marginBottom="10dip"></ImageButton>
 		</TableRow>
+		
 	</TableLayout>
+	<Button android:id="@+id/buttonManual"  
+	android:layout_gravity="center" android:layout_height="60dip" 
+	android:layout_width="200dip" android:text="Manual Configuration" 
+	android:textSize="12dip" />
+
 </LinearLayout>
