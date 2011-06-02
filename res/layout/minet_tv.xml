@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:orientation="vertical"
-	android:layout_width="fill_parent" android:background="#fff"
+	android:layout_width="fill_parent" android:background="@drawable/background_tv"
 	android:layout_height="fill_parent" android:paddingLeft="4dip"
 	android:paddingTop="50dip" android:paddingRight="4dip"
 	xmlns:android="http://schemas.android.com/apk/res/android">
 	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
-		android:layout_marginLeft="100dip" android:gravity="center">
+		android:layout_marginLeft="100dip" android:gravity="center"
+		>
 		<TableRow>
 			<ImageButton android:id="@+id/tf1" android:src="@drawable/tf1"
 				android:background="@drawable/btn_custom_tv"
@@ -77,7 +78,7 @@
 	</TableLayout>
 	<Button android:id="@+id/buttonManual"  
 	android:layout_gravity="center" android:layout_height="40dip" android:layout_marginTop="5dip"
-	android:layout_width="180dip" android:text="Manual Configuration" 
+	android:layout_width="165dip" android:text="Manual Configuration" 
 	android:textSize="12dip" />
 
 </LinearLayout>
