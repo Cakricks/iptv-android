@@ -23,6 +23,7 @@ import com.android.IPTV.channelUtils.ChannelLinks;
 
 public class MinetTV extends Activity implements OnClickListener {
 
+	
 	private String urlTv;
 	private ImageButton tf1Button;
 	private ImageButton france2Button;

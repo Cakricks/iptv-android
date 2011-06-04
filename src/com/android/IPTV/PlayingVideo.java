@@ -26,7 +26,7 @@ public class PlayingVideo extends Activity implements OnCompletionListener, OnEr
 		/*Configuration attente vidéo*/
 		 dialog = new ProgressDialog(this);
 		dialog.setCancelable(false);
-		dialog.setMessage("Loading Vidéo");
+		dialog.setMessage("Loading Video");
 		dialog.show();
         
 		String URL = this.getIntent().getExtras().getString("URL");
@@ -57,6 +57,7 @@ public class PlayingVideo extends Activity implements OnCompletionListener, OnEr
 		
 		Intent i = new Intent(this, MinetTV.class);
 		startActivity(i);
+		finish();
 	}
 
 	@Override
