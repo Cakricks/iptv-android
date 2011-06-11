@@ -23,7 +23,6 @@ import com.android.IPTV.channelUtils.ChannelLinks;
 
 public class MinetTV extends Activity implements OnClickListener {
 
-	
 	private String urlTv;
 	private ImageButton tf1Button;
 	private ImageButton france2Button;
@@ -49,12 +48,13 @@ public class MinetTV extends Activity implements OnClickListener {
 	@Override
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
+
 		setContentView(R.layout.minet_tv);
 
 		/* Configuration attente connexion wifi */
 		dialog = new ProgressDialog(this);
 		dialog.setCancelable(false);
-		dialog.setMessage("Connecting Wifi");
+		dialog.setMessage("Connecting Wifi ... ");
 		dialog.show();
 
 		/* Connexion Wifi */
@@ -98,21 +98,20 @@ public class MinetTV extends Activity implements OnClickListener {
 		configManu.setOnClickListener(ocl);
 
 	}
- 
- Context cont = this;
- private OnClickListener ocl = new OnClickListener() {
-	    public void onClick(View v) {
-	    	Intent i = new Intent(cont,IPTV.class);
+
+	Context cont = this;
+	private OnClickListener ocl = new OnClickListener() {
+		public void onClick(View v) {
+			Intent i = new Intent(cont, IPTV.class);
 			startActivity(i);
-	    }
+		}
 	};
 
 	@Override
 	public void onClick(View arg0) {
 
 		ImageButton button_clicked = (ImageButton) arg0;
-		
-		
+
 		switch (button_clicked.getId()) {
 		case R.id.tf1:
 			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
@@ -174,7 +173,6 @@ public class MinetTV extends Activity implements OnClickListener {
 			urlTv = "rtsp://" + ChannelLinks.serverAddr + ":5554/"
 					+ ChannelLinks.itele;
 			break;
-		
 
 		}
 
@@ -234,6 +232,12 @@ public class MinetTV extends Activity implements OnClickListener {
 		return true;
 
 	}
+	
+	@Override
+	protected void onPause() {
+		this.finish();
+ 		super.onPause();
+	}
 
 	private class ConnectionManagement extends AsyncTask<Void, Void, Void> {
 
@@ -252,7 +256,7 @@ public class MinetTV extends Activity implements OnClickListener {
 
 				for (int i = 0; i < 99; i++) {
 					try {
-						Thread.sleep(10);
+						Thread.sleep(15);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
@@ -268,4 +272,5 @@ public class MinetTV extends Activity implements OnClickListener {
 
 		}
 	}
+
 }
