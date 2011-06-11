@@ -1,16 +1,16 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
    <item 
 	android:state_enabled="false"
-        android:drawable="@drawable/tv_button_clicked" />
+        android:drawable="@drawable/button_green" />
     <item 
     	android:state_pressed="true" 
     	android:state_enabled="true"
-        android:drawable="@drawable/tv_button" />
+        android:drawable="@drawable/button_purple" />
     <item 
     	android:state_focused="true" 
     	android:state_enabled="true"
-        android:drawable="@drawable/tv_button" />
+        android:drawable="@drawable/button_purple" />
     <item 
     	android:state_enabled="true"
-        android:drawable="@drawable/tv_button_clicked" />
+        android:drawable="@drawable/button_green" />
 </selector>
