@@ -97,5 +97,9 @@ public class IPTV extends Activity implements View.OnClickListener,
 			return false;
 	}
 
-	
+	@Override
+	protected void onPause() {
+		finish();
+		super.onPause();
+	}
 }
