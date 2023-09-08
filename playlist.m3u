@@ -1,0 +1,25 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="CanaldelCongreso452.mx" tvg-logo="https://i.imgur.com/TtVZR5W.png" group-title="Legislative",Canal del Congreso 45.2
+https://edgeplay.canaldelcongreso.gob.mx/live_sd2/smil:canal-sd2.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="CanaldelCongreso453.mx" tvg-logo="https://i.imgur.com/DS3166S.png" group-title="Legislative",Canal del Congreso 45.3
+https://edgeplay.canaldelcongreso.gob.mx/live_hd1/smil:canal-hd1.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="CartoonitoMexico.mx" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cartoonito_-_Logo_2021.svg/512px-Cartoonito_-_Logo_2021.svg.png" group-title="Animation;Kids",Cartoonito Mexico
+https://playout.cdn.cartoonnetwork.com.br/playout_04/playlist-720p.m3u8
+#EXTINF:-1 tvg-id="CartoonNetworkMexico.mx" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/512px-Cartoon_Network_2010_logo.svg.png" group-title="Kids",Cartoon Network Mexico
+https://playout.cdn.cartoonnetwork.com.br/playout_02/playlist-720p.m3u8
+#EXTINF:-1 tvg-id="MexiquenseTV.mx" tvg-logo="https://i.imgur.com/iVfzakA.png" group-title="",Mexiquense TV
+https://5e50264bd6766.streamlock.net/mexiquense/videomexiquense/playlist.m3u8
+#EXTINF:-1 tvg-id="MyTimeMovieNetworkMexico.mx" tvg-logo="https://i.imgur.com/pw4NZK1.png" group-title="Movies",MyTime Movie Network Mexico
+https://appletree-mytime-samsungmexico.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="NRTMexico.mx" tvg-logo="https://i.imgur.com/W2E0fSy.png" group-title="News",NRT Mexico
+https://59e88b197fb16.streamlock.net:4443/live/canal4/playlist.m3u8
+#EXTINF:-1 tvg-id="PresumiendoMexico.mx" tvg-logo="https://i.imgur.com/bFG4Rqz.png" group-title="Culture",Presumiendo Mexico
+https://5ca39be538307.streamlock.net/telemetrika/smil:telemetrika.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="TelevisaMexicali.mx" tvg-logo="https://i.imgur.com/NIEWc2s.jpg" group-title="",Televisa Mexicali
+https://ythls.onrender.com/channel/UCcmuFsMIIIHO3LBqeBVfm8Q.m3u8
+#EXTINF:-1 tvg-id="TUDNMexico.mx" tvg-logo="https://i.imgur.com/oT5CAvd.png" group-title="",TUDN Mexico
+http://190.61.102.67:2000/play/a08j/index.m3u8
+#EXTINF:-1 tvg-id="XEIPNTDT.mx" tvg-logo="https://i.imgur.com/K0351vF.png" group-title="Education",XEIPN-TDT
+https://vivo.canaloncelive.tv/alivepkgr3/ngrp:cepro_all/playlist.m3u8
+#EXTINF:-1 tvg-id="XHSPRTDT1.mx" tvg-logo="https://i.imgur.com/AWLWu91.png" group-title="Culture;Education",XHSPR-TDT1
+https://60ed5b6d0df78.streamlock.net:1936/segundo/segundo/playlist.m3u8
